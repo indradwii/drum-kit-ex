@@ -1,0 +1,91 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #2c2c2c;
+    font-family: Arial, sans-serif;
+  }
+  
+  .drum-kit {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .cymbal, .tom, .kick, .snare {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .cymbal {
+    background: linear-gradient(to bottom, gold, darkgoldenrod);
+  }
+  
+  .tom {
+    background: linear-gradient(to bottom, gray, darkgray);
+  }
+  
+  .kick {
+    background: linear-gradient(to bottom, black, #333);
+  }
+  
+  .snare {
+    background: linear-gradient(to bottom, white, #ccc);
+  }
+  
+  .cymbal:hover, .tom:hover, .kick:hover, .snare:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+  }
+  
+/* styles.css */
+
+/* Tambahkan media query untuk ukuran layar kecil */
+@media (max-width: 600px) {
+    .cymbal, .tom, .kick, .snare {
+      width: 80px; /* Perbesar tombol */
+      height: 80px; /* Perbesar tombol */
+      font-size: 16px; /* Ukuran font lebih besar untuk visibilitas */
+    }
+  
+    .row {
+      gap: 10px; /* Kurangi jarak antar elemen */
+    }
+  
+    .drum-kit {
+      gap: 5px; /* Kurangi jarak antar baris */
+    }
+  }
+  
+  /* Untuk layar yang lebih kecil lagi, misalnya di bawah 400px */
+  @media (max-width: 400px) {
+    .cymbal, .tom, .kick, .snare {
+      width: 100px; /* Tombol lebih besar */
+      height: 100px;
+      font-size: 18px;
+    }
+  
+    .row {
+      gap: 8px;
+    }
+  
+    .drum-kit {
+      gap: 8px;
+    }
+  }
+  
